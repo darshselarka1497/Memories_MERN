@@ -8,13 +8,14 @@ import postRoutes from './routes/posts.js'
 
 const app = express();
 
-//setting up routes for the post cards with each url starting with posts
-app.use('/posts', postRoutes);
 
 app.use(bodyParser.json({limit: "30mb", extended: "true"}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: "true"}));
 
 app.use(cors());
+
+//setting up routes for the post cards with each url starting with posts
+app.use('/posts', postRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://darshselarka:helloworld@cluster0.8cms8.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
