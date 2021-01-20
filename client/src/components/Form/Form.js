@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {TextField, Button, Typography, Paper} from '@material-ui/core';
 import useStyles from './styles'
 import FileBase from 'react-file-base64';
+import {useDispatch} from 'react-redux'
 
 const Form = () => {
 
@@ -15,13 +16,15 @@ const Form = () => {
 
     const classes = useStyles();
 
-    const handleSubmit = () => {
+    const dispatch = useDispatch();
 
-    }
+    const handleSubmit = () => {
+        
+    };
 
     const clear = () => {
 
-    }
+    };
     
     return (
         <Paper className={classes.paper}>
